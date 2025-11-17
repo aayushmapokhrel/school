@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from school_api.models import School, Student, Teacher
-from school_api.serializers import (
+from school_app.models import School, Student, Teacher
+from school_app.api.serializers import (
     SchoolSerializer,
     StudentSerializer,
     TeacherSerializer
