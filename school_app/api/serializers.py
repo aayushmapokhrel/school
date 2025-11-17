@@ -18,7 +18,18 @@ class StudentSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Age must be between 5 and 20")
         return value
 
+    def validate_grade(self, value):
+        if not value.strip():
+            raise serializers.ValidationError("Grade cannot be empty")
+        return value
+
+
 class TeacherSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = "__all__"
+
+    def validate_subject(self, value):
+        if not value.strip():
+            raise serializers.ValidationError("Subject cannot be empty")
+        return value
