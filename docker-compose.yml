@@ -9,10 +9,6 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_HOST: ${DB_HOST}
       POSTGRES_PORT: ${DB_PORT}
-<<<<<<< HEAD
-
-=======
->>>>>>> feature/add-redis-integration
     ports:
       - "5432:5432"
     volumes:
